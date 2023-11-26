@@ -17,11 +17,13 @@ weekdays = {
 load_dotenv()
 token = os.getenv('TOKEN')
 
+
 def present_day():
     today = datetime.today()
     date = today.strftime("%d.%m")
     weekday = weekdays[today.weekday()]
     return f'Сегодня {date}, {weekday}.'
+
 
 def reply(update, context):
     chat = update.effective_chat
